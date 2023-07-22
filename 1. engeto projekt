@@ -63,22 +63,16 @@ def sum_all_numeric_strings(text):
     return sum(numeric_strings)
 
 def analyze_text_statistics(text):
-    # Počet slov
     word_count = len(text.split())
 
-    # Počet slov začínajících velkým písmenem
     titlecase_words_count = count_words_starting_with_uppercase(text)
 
-    # Počet slov psaných velkými písmeny
     uppercase_words_count = count_words_in_uppercase(text)
 
-    # Počet slov psaných malými písmeny
     lowercase_words_count = count_words_in_lowercase(text)
 
-    # Počet čísel (ne cifer)
     numeric_strings_count = count_numeric_strings(text)
 
-    # Suma všech čísel (ne cifer) v textu
     sum_of_numeric_strings = sum_all_numeric_strings(text)
 
     print(f"There are {word_count} words in the selected text.")
@@ -133,4 +127,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
